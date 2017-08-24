@@ -1,0 +1,17 @@
+{
+  "name": "type-storage",
+  "version": "0.1.1",
+  "description": "A tool to store multiple types of data in Cookie or Web Storage.",
+  "main": "storage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "storage",
+    "cookie",
+    "localStorage",
+    "sessionStorage"
+  ],
+  "author": "Ayon Lee",
+  "license": "MIT"
+}
