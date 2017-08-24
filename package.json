@@ -13,5 +13,9 @@
     "sessionStorage"
   ],
   "author": "Ayon Lee",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyurl/delay-keyup.git"
+  }
 }
