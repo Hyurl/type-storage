@@ -1,6 +1,6 @@
 # Type-Storage
 
-**We know that Cookie and Web Storage (such as Session Storage and Local Storage) can only store strings, this simple module let you handle Object, Array and other types to be stored and retrived in them.**
+**We know that Cookie and Web Storage (such as Session Storage and Local Storage) can only store strings, this simple module let you handle Object, Array and other types to be stored and retrieved in them.**
 
 # Install
 

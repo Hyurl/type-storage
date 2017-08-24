@@ -1,6 +1,6 @@
 {
   "name": "type-storage",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tool to store multiple types of data in Cookie or Web Storage.",
   "main": "storage.js",
   "scripts": {
@@ -16,6 +16,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hyurl/delay-keyup.git"
+    "url": "git+https://github.com/hyurl/type-storage.git"
   }
 }
