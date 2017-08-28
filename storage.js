@@ -67,7 +67,7 @@ function storage(key = "", value = "", local = false) {
 };
 
 /**
- * Sets and retrieves Storage data, supports String, Number, Object, Array,
+ * Sets and retrieves Cookie data, supports String, Number, Object, Array,
  * Boolean and Function.
  * 
  * @param  {String} key     The cookie name.
