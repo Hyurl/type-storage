@@ -182,6 +182,8 @@ storage.cookie = cookie;
 
 if (typeof module === 'object' && module.exports) { //Nodejs/CommonJS
     module.exports = storage;
-} else if (typeof define === 'function' && define.amd) { //AMD
-    define("storage", [], storage);
+} else if (typeof define === 'function') { //AMD
+    define((require, exports, module) => {
+        module.exports = storage;
+    });
 }
