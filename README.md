@@ -37,14 +37,19 @@ storage("b", ["Hello", "World"]); //Array
 cookie("c", storage("a")); //storage("a") returns the Object.
 cookie("d", storage("b")); //storage("b") returns the Array.
 
-console.log(storage()); //Prints what's in Storage.
-console.log(cookie()); //Prints what's in Cookie.
+console.log(storage()); //Print out all data in Storage.
+console.log(cookie());  //Print out all data in Cookie.
 
 console.log(storage().length); //Prints length of Storages.
-console.log(cookie().length); //Prints length of Cookies.
+console.log(cookie().length);  //Prints length of Cookies.
+
+storage("a", undefined); //Removes a.
+cookie("c", undefined);  //Removes c.
 ```
 
 ## storage()
+
+**Sets and retrieves Storage data, supports String, Number, Object, Array, Boolean and Function.**
 
 **params:**
 
@@ -55,7 +60,7 @@ console.log(cookie().length); //Prints length of Cookies.
 **return:**
 
 If both `key` and `value` are passed, alway returns the value;
-if only `key` is passed, returns the value it represents, or undefined.
+if only `key` is passed, returns the data it represents, or undefined.
 
 ## cookie()
 
