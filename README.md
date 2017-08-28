@@ -48,8 +48,8 @@ console.log(cookie().length); //Prints length of Cookies.
 
 **params:**
 
-- `key` The key-value pair key.
-- `value` The key-value pair value.
+- `key` The storage name.
+- `value` The storage data, if an `undefined` is passed, remove the previous data.
 - `local` Store in localStorage instead of sessionStorage, default is `false`.
 
 **return:**
