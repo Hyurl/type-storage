@@ -177,12 +177,11 @@ function cookie(key = "", value = "", options = {}) {
     return value;
 };
 
+storage.storage = storage;
+storage.cookie = cookie;
+
 if (typeof module === 'object' && module.exports) { //Nodejs/CommonJS
-    module.exports = {
-        storage: storage,
-        cookie: cookie,
-    };
+    module.exports = storage;
 } else if (typeof define === 'function' && define.amd) { //AMD
     define("storage", [], storage);
-    define("cookie", [], cookie);
 }
