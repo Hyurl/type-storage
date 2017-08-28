@@ -172,7 +172,7 @@ function cookie(key = "", value = "", options = {}) {
             ].join('');
         };
         store(key, _value); //Store cookie.
-        store('__typeInfo__', JSON.stringify(__typeInfo__)); //Store type information.	
+        store('__typeInfo__', JSON.stringify(__typeInfo__)); //Store type information.
     }
     return value;
 };
