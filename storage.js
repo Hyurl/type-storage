@@ -43,7 +43,7 @@ function storage(key = "", value = "", local = false) {
     if (!key) { //If no argument is provided, then return all data.
         return storage;
     } else if (key === 'length') { //If key is 'length', which cannot be set, then return value immediately.
-        return value;
+        return storage[key];
     } else if (arguments.length === 1) { //If only key is provided, then return its value.
         return storage[key];
     } else if (value === undefined) { //If value is undefined, then remove the data.
@@ -136,7 +136,7 @@ function cookie(key = "", value = "", options = {}) {
     if (!key) { //If no argument is provided, then return all data.
         return cookie;
     } else if (key === 'length') { //If key is 'length', which cannot be set, then return value immediately.
-        return value;
+        return cookie[key];
     } else if (arguments.length === 1) { //If only key is provided, then return its value.
         return cookie[key];
     } else {
@@ -187,6 +187,22 @@ function cookie(key = "", value = "", options = {}) {
 
 storage.storage = storage;
 storage.cookie = cookie;
+storage.session = function(key = "", value = "") {
+    if (arguments.length === 0)
+        return storage();
+    else if (arguments.length === 1)
+        return storage()[key];
+    else
+        return storage(key, value);
+};
+storage.local = function(key = "", value = "") {
+    if (arguments.length === 0)
+        return storage(true);
+    else if (arguments.length === 1)
+        return storage(true)[key];
+    else
+        return storage(key, value, true);
+};
 
 if (typeof module === 'object' && module.exports) { //Nodejs/CommonJS
     module.exports = storage;

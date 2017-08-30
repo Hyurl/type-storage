@@ -59,9 +59,28 @@ cookie("c", undefined);  //Removes c.
 
 **return:**
 
-If both `key` and `value` are passed, alway returns the value;
+If both `key` and `value` are passed, always returns the value;
 if only `key` is passed, returns the data it represents, or undefined.
 
 ## cookie()
 
-**This function is similiar to `storage()`, only it stores data in cookies, and if the third argument passes a `true`, it stores data only in one year.**
+**This function is similar to `storage()`, only it stores data in cookies, and if the third argument passes a `true`, it stores data only in one year.**
+
+## References
+
+Sometimes, there reference methods are useful:
+
+- `storage.session()` The Session Storage.
+- `storage.local()` The Local Storage.
+- `storage.storage()` The storage() itself.
+- `storage.cookie()` The cookie() function.
+
+You can do:
+
+```javascript
+//Import storage and/or storage() all at once.
+import storage from 'type-storage';
+
+//Or import each of them seperaterly.
+import {session, local, cookie} from 'type-storage';
+```
