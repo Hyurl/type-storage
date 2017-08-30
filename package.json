@@ -1,21 +1,21 @@
 {
-  "name": "type-storage",
-  "version": "0.1.3",
-  "description": "A tool to store multiple types of data in Cookie or Web Storage.",
-  "main": "storage.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "storage",
-    "cookie",
-    "localStorage",
-    "sessionStorage"
-  ],
-  "author": "Ayon Lee",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hyurl/type-storage.git"
-  }
+    "name": "type-storage",
+    "version": "0.1.4",
+    "description": "A tool to store multiple types of data in Cookie or Web Storage.",
+    "main": "storage.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "storage",
+        "cookie",
+        "localStorage",
+        "sessionStorage"
+    ],
+    "author": "Ayon Lee",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hyurl/type-storage.git"
+    }
 }

@@ -143,12 +143,6 @@ function cookie(key = "", value = "", options = {}) {
         if (value === undefined) { //If value is undefined, then remove the data.
             options.expires = -1000; //Make the data expired.
         }
-        //Genertae an expire time.
-        if (typeof options.expires === 'number' && options.expires) {
-            var date = new Date();
-            date.setTime(date.getTime() + options.expires);
-            options.expires = date.toUTCString();
-        }
 
         var type = typeof value,
             _value = "";
@@ -161,8 +155,14 @@ function cookie(key = "", value = "", options = {}) {
             _value = value;
 
         __typeInfo__[key] = type;
+        //Genertae an expire time.
+        var getExpires = function(timeout) {
+            var date = new Date();
+            date.setTime(date.getTime() + timeout);
+            return date.toUTCString();
+        };
         //Cookie setter.
-        var store = function(key, value) {
+        var store = function(key, value, options) {
             document.cookie = [
                 encodeURIComponent(key) + '=' + encodeURIComponent(value),
                 options.expires ? '; expires=' + options.expires : '',
@@ -171,8 +171,16 @@ function cookie(key = "", value = "", options = {}) {
                 options.secure ? '; secure' : '',
             ].join('');
         };
-        store(key, _value); //Store cookie.
-        store('__typeInfo__', JSON.stringify(__typeInfo__)); //Store type information.
+        //Genertae an expire time.
+        if (typeof options.expires === 'number' && options.expires) {
+            options.expires = getExpires(options.expires);
+        }
+        store(key, _value, options); //Store cookie.
+        store('__typeInfo__', JSON.stringify(__typeInfo__), {
+            expires: getExpires(1000 * 60 * 60 * 24 * 365),
+            path: '/',
+            secure: true,
+        }); //Store type information.
     }
     return value;
 };
