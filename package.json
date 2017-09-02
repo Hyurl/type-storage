@@ -1,6 +1,6 @@
 {
     "name": "type-storage",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "A tool to store multiple types of data in Cookie or Web Storage.",
     "main": "storage.js",
     "scripts": {
